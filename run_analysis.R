@@ -67,5 +67,6 @@ run_analysis <- function() {
         activityAverages <- tapply(justMeansAndStDevs[,i], justMeansAndStDevs$Activity, mean)
     }
     allAverages <- rbind(subjectAverages, activityAverages)
-    print(write.table(allAverages, "analysis_run.txt", row.names=FALSE))
+    write.table(allAverages, "analysis_run.txt", row.names=FALSE)
+    print("analysis_run.txt")
 }
