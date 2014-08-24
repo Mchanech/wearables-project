@@ -68,5 +68,5 @@ run_analysis <- function() {
     }
     allAverages <- rbind(subjectAverages, activityAverages)
     write.table(allAverages, "analysis_run.txt", row.names=FALSE)
-    print("analysis_run.txt")
+    read.table("analysis_run.txt")
 }
